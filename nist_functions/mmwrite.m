@@ -36,12 +36,15 @@ function [ err ] = mmwrite(filename,A,comment,field,precision)
 %                              If ommitted, full working precision is used.
 %
 
+%% Begin: the following statement was added by S.Lafi to prevent the 'mattype not found' error
 if(strcmpi(field, 'real') || strcmpi(field, 'complex') || strcmpi(field, 'integer') || strcmpi(field, 'pattern'))
     mattype = field;
 else
     error('The field parameter is invalid.');
 end
+% End
 
+%% NIST original code
 if ( nargin == 5) 
   precision = 16;
 elseif ( nargin == 4) 
