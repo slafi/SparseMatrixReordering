@@ -58,7 +58,7 @@ function ret = ViewMatrixAfterReordering (A, A_ord, nz, pct, bw, bw_ord, algorit
       %% Save as a PNG image if required
       if(do_not_print == 1)
          print(fh, '-dpng', output_filename, '-r200');
-         fprintf('Plot saved as image in the file %s.\n', output_filename);
+         fprintf('Plot saved as image in the file %s\n', output_filename);
       end
       
       %% Close the figure if not to be shown

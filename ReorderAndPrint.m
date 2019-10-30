@@ -72,7 +72,7 @@ function ret = ReorderAndPrint(i_mtx_filename, ofolder, algorithm, field, precis
   %% Save the permutation vector if required 
   %% For instance, the permutation vector can be used to reorder an RHS vector
   if (save_permutation_vector == 1)
-      p_mtx_filename = strcat(ofolder, strrep(ifname, '.mtx', ''), '_p.mtx');
+      p_mtx_filename = strcat(ofolder, ifname, '_p.mtx');
       fprintf('Saving permutation vector to file: %s . . . . . . ', p_mtx_filename);
       mmwrite(p_mtx_filename, p, '', 'real', 5);
       fprintf('Done!\n');
@@ -80,7 +80,7 @@ function ret = ReorderAndPrint(i_mtx_filename, ofolder, algorithm, field, precis
   fprintf('\n');
   
   %% Plot the original and RCM-matrices side by side
-  output_filename = strcat(ofolder, strrep(ifname, '.mtx', ''), '_', algorithm,'.png');
+  output_filename = strcat(ofolder, ifname, '_', algorithm,'.png');
   ViewMatrixAfterReordering(A, A_ord, nz, pct, bw, bw_ord, algorithm, output_filename, do_not_show, do_not_print);
       
 end
