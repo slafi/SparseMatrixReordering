@@ -14,7 +14,7 @@ do_not_print = 1;
 
 %% File paths
 i_mtx_filename = 'data\NIST\bcsstk17.mtx';
-ofolder = 'data\NIST\Output';
+ofolder = 'data\NIST\Output\';
 
 %% Get script's folder path
 cur_dir = GetScriptFolderFromName('single_file_reordering.m');
