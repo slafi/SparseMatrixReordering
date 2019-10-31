@@ -23,15 +23,15 @@ To reorder a single matrix, the function `ReorderAndPrint` can be used as follow
 
 ```Matlab
 %% Funtion parameters:
-%%			i_mtx_filename - input matrix market (MM) filename
-%%			ofolder - the output folder
-%%			algorithm - the reordering algorithm (i.e., ND or RCM)
-%%			field - the type of the sparse matrix data (e.g., real, complex, etc.)
-%%			precision - number of decimal digits to consider when writing the sparse matrix to a MM file
-%%			save_permutation_vector - a flag indicating if the permutation vector should also be written to a MM file (this can be useful if a RHS vector should also be reordered)
-%%			do_not_show - a flag indicating whether the matrix plot is shown on the screen
-%%			do_not_print - a flag indicating whether the matrix plot is saved as a PNG image
-%%			get_stats - a flag indicating whether the matrix statistics are computed
+%%	i_mtx_filename - input matrix market (MM) filename
+%%	ofolder - the output folder
+%%	algorithm - the reordering algorithm (i.e., ND or RCM)
+%%	field - the type of the sparse matrix data (e.g., real, complex, etc.)
+%%	precision - number of decimal digits to consider when writing the sparse matrix to a MM file
+%%	save_permutation_vector - a flag indicating if the permutation vector should also be written to a MM file (this can be useful if a RHS vector should also be reordered)
+%%	do_not_show - a flag indicating whether the matrix plot is shown on the screen
+%%	do_not_print - a flag indicating whether the matrix plot is saved as a PNG image
+%%	get_stats - a flag indicating whether the matrix statistics are computed
 %%
 ret = ReorderAndPrint(i_mtx_filename, ofolder, algorithm, field, precision, save_permutation_vector, do_not_show, do_not_print, get_stats);
 ```
